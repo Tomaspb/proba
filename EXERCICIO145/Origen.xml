@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<base nome="automatizada">
+	<taboa nome="Productos">
+		<col tipo="int" extra="Primary key">id</col>
+		<col tipo="varchar(100)" extra="not null">nome</col>
+		<col tipo="float" extra="not null">prezo</col>
+		<Productos>1,Audi,1200.5</Productos>
+		<Productos>2,Ford,2500.6</Productos>
+		<Productos>3,Porche,6996</Productos>
+	</taboa>
+	
+	<taboa nome="Pedidos">
+		<col tipo="int" extra="Primary key auto_increment">id</col>
+		<col tipo="datetime" extra="not null">momento</col>
+		<col tipo="int" extra="not null">id_cliente</col>
+	</taboa>
+</base>
+
