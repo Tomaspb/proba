@@ -579,10 +579,15 @@ class Enlaces{
         if(etiquetas.contains(",")){
             sonVarios=sonVarios+etiquetas.replace(",","\" or etiqueta=\"");
         }
+        else{
+            sonVarios=sonVarios+etiquetas;
+        }
         
         consulta1="Select * from enlaces where id in (";
-        consulta2="Select idEnlace from etiqueta where "+sonVarios+"\")";
+        consulta2="Select idEnlace from etiquetas where "+sonVarios+"\")";
        
+        System.out.println(consulta1+consulta2);
+        
         try{
             PreparedStatement psConsenlaces;
             psConsenlaces=Aplicacion.conexion.prepareStatement(consulta1+consulta2);
